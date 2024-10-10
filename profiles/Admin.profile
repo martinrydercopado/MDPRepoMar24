@@ -21240,6 +21240,9 @@
         <layout>Macro-Macro Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>NewObjectOct9__c-NewObjectOct9 Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>ObjectForDeletion__c-ObjectForDeletion Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -22072,6 +22075,15 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>MacroUsage</object>
         <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>NewObjectOct9__c</object>
+        <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>false</allowCreate>
