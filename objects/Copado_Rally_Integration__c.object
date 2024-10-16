@@ -143,95 +143,51 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
-    <enableReports>true</enableReports>
+    <enableReports>false</enableReports>
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <externalSharingModel>Private</externalSharingModel>
     <fields>
-        <fullName>Amount__c</fullName>
-        <label>Amount</label>
-        <precision>18</precision>
-        <required>true</required>
-        <scale>2</scale>
+        <fullName>Is_Rally_Sync_Running__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <label>Is Rally Sync Running</label>
         <trackTrending>false</trackTrending>
-        <type>Currency</type>
+        <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>Expense_Type__c</fullName>
-        <label>Expense Type</label>
+        <fullName>Last_Sync_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Last Sync Time</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Airfare</fullName>
-                    <default>false</default>
-                    <label>Airfare</label>
-                </value>
-                <value>
-                    <fullName>Hotel</fullName>
-                    <default>false</default>
-                    <label>Hotel</label>
-                </value>
-                <value>
-                    <fullName>Rental car</fullName>
-                    <default>false</default>
-                    <label>Rental car</label>
-                </value>
-                <value>
-                    <fullName>Meals</fullName>
-                    <default>false</default>
-                    <label>Meals</label>
-                </value>
-                <value>
-                    <fullName>Other</fullName>
-                    <default>false</default>
-                    <label>Other</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
+        <type>DateTime</type>
     </fields>
     <fields>
-        <fullName>External_Id__c</fullName>
-        <caseSensitive>true</caseSensitive>
-        <externalId>true</externalId>
-        <label>External Id</label>
-        <length>18</length>
-        <required>true</required>
+        <fullName>Named_Credential__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Named Credential</label>
+        <length>255</length>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
-        <unique>true</unique>
+        <unique>false</unique>
     </fields>
-    <fields>
-        <fullName>Travel_Approval__c</fullName>
-        <label>Travel Approval</label>
-        <referenceTo>Travel_Approval__c</referenceTo>
-        <relationshipLabel>Expense Items</relationshipLabel>
-        <relationshipName>Expense_Items</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
-        <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
-    </fields>
-    <label>Expense Item</label>
+    <label>Copado Rally Integration</label>
     <nameField>
-        <displayFormat>E-{00000}</displayFormat>
-        <label>Expense Item Number</label>
-        <type>AutoNumber</type>
+        <label>Copado Rally Integration Name</label>
+        <type>Text</type>
     </nameField>
-    <pluralLabel>Expense Items</pluralLabel>
+    <pluralLabel>Copado Rally Integrations</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
-    <startsWith>Vowel</startsWith>
+    <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
