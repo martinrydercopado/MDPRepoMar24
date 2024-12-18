@@ -49,10 +49,6 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>standard__LightningInstrumentation</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>standard__SalesforceCMS</name>
         <type>CustomApplication</type>
     </appMenuItems>
@@ -178,6 +174,18 @@
     </appMenuItems>
     <appMenuItems>
         <name>copado__Copado_Admin</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>copadoQuality__Copado_Explorer</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>TestingVFTab</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__FlowsApp</name>
         <type>CustomApplication</type>
     </appMenuItems>
 </AppMenu>
