@@ -163,6 +163,46 @@
     <enableStreamingApi>false</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fieldSets>
+        <fullName>copadoQuality__AssignmentFieldSet</fullName>
+        <description>It&apos;s used on Assignees tab of Functional Review Layout</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copadoQuality__Exploration_URL__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copadoQuality__Credential__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copadoQuality__Assignee__r.FirstName</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copadoQuality__Assignee__r.LastName</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copadoQuality__Assignee__r.Username</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copadoQuality__Assignee__r.UserRoleId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Assignment Field Set</label>
+    </fieldSets>
+    <fieldSets>
         <fullName>copadoQuality__RelatedList</fullName>
         <description>Dynamic Datatable on User Story page as related list</description>
         <displayedFields>
@@ -176,17 +216,28 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>copadoQuality__Review_Outcome__c</field>
+            <field>copadoQuality__Credential__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>RelatedList</label>
     </fieldSets>
     <fields>
+        <fullName>copadoQuality__Assignee__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <label>Assignee</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Functional_Review_Sessions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>copadoQuality__Credential__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Functional Review Sessions</relationshipLabel>
@@ -199,7 +250,6 @@
     <fields>
         <fullName>copadoQuality__Exploration_URL__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Exploration URL</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -222,7 +272,6 @@
     <fields>
         <fullName>copadoQuality__Functional_Review__c</fullName>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>Functional Review</label>
         <referenceTo>copadoQuality__Functional_Review__c</referenceTo>
         <relationshipLabel>Functional Review Sessions</relationshipLabel>
@@ -235,9 +284,21 @@
         <writeRequiresMasterRead>true</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>copadoQuality__Review_Outcome__c</fullName>
+        <fullName>copadoQuality__Review_Environment__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot;+copadoQuality__Functional_Review__r.copadoQuality__Review_Environment__c,  copadoQuality__Functional_Review__r.copadoQuality__Review_Environment__r.Name , &quot;_blank&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Review Environment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copadoQuality__Review_Outcome__c</fullName>
+        <deprecated>false</deprecated>
         <label>Review Outcome</label>
         <length>131072</length>
         <trackHistory>false</trackHistory>
@@ -246,10 +307,54 @@
         <visibleLines>25</visibleLines>
     </fields>
     <fields>
+        <fullName>copadoQuality__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
+                </value>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Regression Review</fullName>
+                    <default>false</default>
+                    <label>Regression Review</label>
+                </value>
+                <value>
+                    <fullName>Under Review</fullName>
+                    <default>false</default>
+                    <label>Under Review</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>copadoQuality__User_Story__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <externalId>false</externalId>
         <label>User Story</label>
         <referenceTo>copado__User_Story__c</referenceTo>
         <relationshipLabel>Functional Review Sessions</relationshipLabel>

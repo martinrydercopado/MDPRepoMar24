@@ -118,6 +118,16 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.copadoQuality__Release__c</fieldItem>
+                <identifier>RecordRelease_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.copadoQuality__User_Story__c</fieldItem>
                 <identifier>RecordUser_Story_cField</identifier>
             </fieldInstance>
@@ -488,6 +498,16 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>copadoQuality:functionalReviewSessionAssignmentContainer</componentName>
+                <identifier>c_functionalReviewSessionAssignmentContainer</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-4adee844-d93f-4f04-af6a-4eda0f1298a6</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>parentFieldApiName</name>
                     <value>copadoQuality__Functional_Review__c.Id</value>
@@ -556,6 +576,20 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>flexipage_tab4</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-4adee844-d93f-4f04-af6a-4eda0f1298a6</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Assignees</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab5</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>

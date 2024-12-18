@@ -4,6 +4,19 @@
         <apexClass>copadoQuality__StartFunctionalReviewCtrl</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>copadoQuality__TestSelectorController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>copadoQuality__Functional_Review_Permission</name>
+    </customPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>copadoQuality__Functional_Review_Session__c.copadoQuality__Assignee__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>copadoQuality__Functional_Review_Session__c.copadoQuality__Credential__c</field>
@@ -22,6 +35,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>copadoQuality__Functional_Review_Session__c.copadoQuality__Review_Outcome__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>copadoQuality__Functional_Review_Session__c.copadoQuality__Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

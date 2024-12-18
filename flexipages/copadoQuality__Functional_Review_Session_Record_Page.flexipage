@@ -7,6 +7,9 @@
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
+                            <value>copadoQuality__Functional_Review_Session__c.copadoQuality__Start_Review</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>Edit</value>
                         </valueListItems>
                         <valueListItems>
@@ -94,6 +97,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.copadoQuality__External_Id__c</fieldItem>
                 <identifier>RecordExternal_Id_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.copadoQuality__Assignee__c</fieldItem>
+                <identifier>RecordAssignee_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-3d974fc7-e374-4e4e-8d8e-05723e897a0d</name>

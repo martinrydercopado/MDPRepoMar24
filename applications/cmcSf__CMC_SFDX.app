@@ -29,7 +29,6 @@
     </actionOverrides>
     <brand>
         <headerColor>#00C3EF</headerColor>
-        <logo>copado__Copado_Logo_Symbol_Only_Blue</logo>
         <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
     </brand>
@@ -43,6 +42,7 @@
     <label>CMC SFDX</label>
     <navType>Standard</navType>
     <tabs>copado__Project__c</tabs>
+    <tabs>cmcSf__Quick_Start</tabs>
     <tabs>copado__Release__c</tabs>
     <tabs>copado__Epic__c</tabs>
     <tabs>copado__Sprint__c</tabs>
